@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{175CE581-C566-4FFC-A0C9-4DD4B60CC8AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AiegleSalary.Model</RootNamespace>
+    <AssemblyName>AiegleSalary.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AiegleSalary.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AiegleSalary.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AiegleSalary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AiegleSalary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AiegleSalary.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayModel.cs" />
+    <Compile Include="OrderData.cs" />
+    <Compile Include="OrderDetails.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_BasicWP.cs">
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Emp.cs">
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EmpSalary.cs">
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FlowType.cs">
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_WPCard.cs">
+      <DependentUpon>AiegleSalary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WPCardDisplayModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AiegleSalary.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AiegleSalary.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AiegleSalary.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AiegleSalary.edmx</DependentUpon>
+      <LastGenOutput>AiegleSalary.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AiegleSalary.edmx.diagram">
+      <DependentUpon>AiegleSalary.edmx</DependentUpon>
+    </None>
+    <None Include="AiegleSalary.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AiegleSalary.edmx</DependentUpon>
+      <LastGenOutput>AiegleSalary.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

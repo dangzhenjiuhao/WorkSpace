@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2845EEC-55C3-426F-9B39-BBFE823AE80E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AiegleSalary.UI</RootNamespace>
+    <AssemblyName>AiegleSalary.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmBaoBiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoBiao.Designer.cs">
+      <DependentUpon>FrmBaoBiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBasicWP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBasicWP.designer.cs">
+      <DependentUpon>FrmBasicWP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmp.designer.cs">
+      <DependentUpon>FrmEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFlowType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFlowType.Designer.cs">
+      <DependentUpon>FrmFlowType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrderQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrderQuery.Designer.cs">
+      <DependentUpon>FrmOrderQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReadOrderData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReadOrderData.Designer.cs">
+      <DependentUpon>FrmReadOrderData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateSalary.Designer.cs">
+      <DependentUpon>FrmUpdateSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtention.cs" />
+    <Compile Include="UCBasic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBasic.Designer.cs">
+      <DependentUpon>UCBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmp.Designer.cs">
+      <DependentUpon>UCEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFlowType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFlowType.Designer.cs">
+      <DependentUpon>UCFlowType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCProduce.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCProduce.designer.cs">
+      <DependentUpon>UCProduce.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmBaoBiao.resx">
+      <DependentUpon>FrmBaoBiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBasicWP.resx">
+      <DependentUpon>FrmBasicWP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmp.resx">
+      <DependentUpon>FrmEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFlowType.resx">
+      <DependentUpon>FrmFlowType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrderQuery.resx">
+      <DependentUpon>FrmOrderQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReadOrderData.resx">
+      <DependentUpon>FrmReadOrderData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateSalary.resx">
+      <DependentUpon>FrmUpdateSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyDataGridView.resx">
+      <DependentUpon>MyDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UCBasic.resx">
+      <DependentUpon>UCBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmp.resx">
+      <DependentUpon>UCEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFlowType.resx">
+      <DependentUpon>UCFlowType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCProduce.resx">
+      <DependentUpon>UCProduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AiegleSalary.Bll\AiegleSalary.Bll.csproj">
+      <Project>{8fae4c4c-1d32-4424-842e-3af62065814e}</Project>
+      <Name>AiegleSalary.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AiegleSalary.Model\AiegleSalary.Model.csproj">
+      <Project>{175ce581-c566-4ffc-a0c9-4dd4b60cc8ac}</Project>
+      <Name>AiegleSalary.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AiegleSalary.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_BasicWP">
+    <Key>
+      <PropertyRef Name="WPCode" />
+    </Key>
+    <Property Name="WPCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GongXu" Type="nvarchar" MaxLength="50" />
+    <Property Name="GXContent" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="float" />
+    <Property Name="ReMark" Type="nvarchar" MaxLength="100" />
+    <Property Name="FlowID" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="CountDefaultValue" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Emp">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dept" Type="nvarchar" MaxLength="50" />
+    <Property Name="POS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckRate" Type="float" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_EmpSalary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="nvarchar" MaxLength="50" />
+    <Property Name="WPCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="Salary" Type="float" />
+    <Property Name="Memo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ListType" Type="int" />
+  </EntityType>
+  <EntityType Name="T_FlowType">
+    <Key>
+      <PropertyRef Name="FlowID" />
+    </Key>
+    <Property Name="FlowID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="T_WPCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="MArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="BArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="APDate" Type="date" />
+    <Property Name="wpCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Salary" Type="float" />
+    <Property Name="PricePer" Type="float" />
+    <Property Name="AppStatus" Type="int" Nullable="false" />
+    <Property Name="AppBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ListType" Type="int" />
+    <Property Name="A1" Type="nvarchar" MaxLength="50" />
+    <Property Name="A2" Type="nvarchar" MaxLength="50" />
+    <Property Name="A3" Type="nvarchar" MaxLength="50" />
+    <Property Name="A4" Type="nvarchar" MaxLength="50" />
+    <Property Name="A5" Type="nvarchar" MaxLength="50" />
+    <Property Name="MQty" Type="int" />
+  </EntityType>
+  <EntityContainer Name="AiegleSalaryModelStoreContainer">
+    <EntitySet Name="T_BasicWP" EntityType="Self.T_BasicWP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Emp" EntityType="Self.T_Emp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_EmpSalary" EntityType="Self.T_EmpSalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_FlowType" EntityType="Self.T_FlowType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_WPCard" EntityType="Self.T_WPCard" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

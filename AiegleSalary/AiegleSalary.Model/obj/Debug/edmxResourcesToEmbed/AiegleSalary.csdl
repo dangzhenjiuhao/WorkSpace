@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AiegleSalary.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_BasicWP">
+    <Key>
+      <PropertyRef Name="WPCode" />
+    </Key>
+    <Property Name="WPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GongXu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GXContent" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="ReMark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FlowID" Type="Int32" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="CountDefaultValue" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="T_Emp">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="POS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckRate" Type="Double" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="T_EmpSalary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="Salary" Type="Double" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ListType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_FlowType">
+    <Key>
+      <PropertyRef Name="FlowID" />
+    </Key>
+    <Property Name="FlowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FlowName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_WPCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DealerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="APDate" Type="DateTime" Precision="0" />
+    <Property Name="wpCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Qty" Type="Double" />
+    <Property Name="Salary" Type="Double" />
+    <Property Name="PricePer" Type="Double" />
+    <Property Name="AppStatus" Type="Int32" Nullable="false" />
+    <Property Name="AppBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ListType" Type="Int32" />
+    <Property Name="A1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="A5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MQty" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="AiegleSalaryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_BasicWP" EntityType="Self.T_BasicWP" />
+    <EntitySet Name="T_Emp" EntityType="Self.T_Emp" />
+    <EntitySet Name="T_EmpSalary" EntityType="Self.T_EmpSalary" />
+    <EntitySet Name="T_FlowType" EntityType="Self.T_FlowType" />
+    <EntitySet Name="T_WPCard" EntityType="Self.T_WPCard" />
+  </EntityContainer>
+</Schema>

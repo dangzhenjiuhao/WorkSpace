@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AiegleSalaryModelStoreContainer" CdmEntityContainer="AiegleSalaryEntities">
+    <EntitySetMapping Name="T_BasicWP">
+      <EntityTypeMapping TypeName="AiegleSalary.Model.T_BasicWP">
+        <MappingFragment StoreEntitySet="T_BasicWP">
+          <ScalarProperty Name="WPCode" ColumnName="WPCode" />
+          <ScalarProperty Name="GongXu" ColumnName="GongXu" />
+          <ScalarProperty Name="GXContent" ColumnName="GXContent" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ReMark" ColumnName="ReMark" />
+          <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CountDefaultValue" ColumnName="CountDefaultValue" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Emp">
+      <EntityTypeMapping TypeName="AiegleSalary.Model.T_Emp">
+        <MappingFragment StoreEntitySet="T_Emp">
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="POS" ColumnName="POS" />
+          <ScalarProperty Name="CheckRate" ColumnName="CheckRate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_EmpSalary">
+      <EntityTypeMapping TypeName="AiegleSalary.Model.T_EmpSalary">
+        <MappingFragment StoreEntitySet="T_EmpSalary">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="WPCode" ColumnName="WPCode" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EName" ColumnName="EName" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_FlowType">
+      <EntityTypeMapping TypeName="AiegleSalary.Model.T_FlowType">
+        <MappingFragment StoreEntitySet="T_FlowType">
+          <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+          <ScalarProperty Name="FlowName" ColumnName="FlowName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_WPCard">
+      <EntityTypeMapping TypeName="AiegleSalary.Model.T_WPCard">
+        <MappingFragment StoreEntitySet="T_WPCard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+          <ScalarProperty Name="MArea" ColumnName="MArea" />
+          <ScalarProperty Name="BArea" ColumnName="BArea" />
+          <ScalarProperty Name="APDate" ColumnName="APDate" />
+          <ScalarProperty Name="wpCode" ColumnName="wpCode" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="PricePer" ColumnName="PricePer" />
+          <ScalarProperty Name="AppStatus" ColumnName="AppStatus" />
+          <ScalarProperty Name="AppBy" ColumnName="AppBy" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+          <ScalarProperty Name="A1" ColumnName="A1" />
+          <ScalarProperty Name="A2" ColumnName="A2" />
+          <ScalarProperty Name="A3" ColumnName="A3" />
+          <ScalarProperty Name="A4" ColumnName="A4" />
+          <ScalarProperty Name="A5" ColumnName="A5" />
+          <ScalarProperty Name="MQty" ColumnName="MQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

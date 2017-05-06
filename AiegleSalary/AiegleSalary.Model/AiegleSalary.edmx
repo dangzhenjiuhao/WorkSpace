@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AiegleSalary.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_BasicWP">
+          <Key>
+            <PropertyRef Name="WPCode" />
+          </Key>
+          <Property Name="WPCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GongXu" Type="nvarchar" MaxLength="50" />
+          <Property Name="GXContent" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="float" />
+          <Property Name="ReMark" Type="nvarchar" MaxLength="100" />
+          <Property Name="FlowID" Type="int" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="CountDefaultValue" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Emp">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FID" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmpName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dept" Type="nvarchar" MaxLength="50" />
+          <Property Name="POS" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckRate" Type="float" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_EmpSalary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderID" Type="nvarchar" MaxLength="50" />
+          <Property Name="WPCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EID" Type="nvarchar" MaxLength="50" />
+          <Property Name="EName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rate" Type="float" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ListType" Type="int" />
+        </EntityType>
+        <EntityType Name="T_FlowType">
+          <Key>
+            <PropertyRef Name="FlowID" />
+          </Key>
+          <Property Name="FlowID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FlowName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="text" />
+        </EntityType>
+        <EntityType Name="T_WPCard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DealerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderID" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalArea" Type="nvarchar" MaxLength="50" />
+          <Property Name="MArea" Type="nvarchar" MaxLength="50" />
+          <Property Name="BArea" Type="nvarchar" MaxLength="50" />
+          <Property Name="APDate" Type="date" />
+          <Property Name="wpCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="PricePer" Type="float" />
+          <Property Name="AppStatus" Type="int" Nullable="false" />
+          <Property Name="AppBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ListType" Type="int" />
+          <Property Name="A1" Type="nvarchar" MaxLength="50" />
+          <Property Name="A2" Type="nvarchar" MaxLength="50" />
+          <Property Name="A3" Type="nvarchar" MaxLength="50" />
+          <Property Name="A4" Type="nvarchar" MaxLength="50" />
+          <Property Name="A5" Type="nvarchar" MaxLength="50" />
+          <Property Name="MQty" Type="int" />
+        </EntityType>
+        <EntityContainer Name="AiegleSalaryModelStoreContainer">
+          <EntitySet Name="T_BasicWP" EntityType="Self.T_BasicWP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Emp" EntityType="Self.T_Emp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_EmpSalary" EntityType="Self.T_EmpSalary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_FlowType" EntityType="Self.T_FlowType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_WPCard" EntityType="Self.T_WPCard" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AiegleSalary.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_BasicWP">
+          <Key>
+            <PropertyRef Name="WPCode" />
+          </Key>
+          <Property Name="WPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GongXu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GXContent" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="ReMark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FlowID" Type="Int32" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="CountDefaultValue" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="T_Emp">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="POS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckRate" Type="Double" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="T_EmpSalary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rate" Type="Double" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ListType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_FlowType">
+          <Key>
+            <PropertyRef Name="FlowID" />
+          </Key>
+          <Property Name="FlowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FlowName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_WPCard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DealerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="APDate" Type="DateTime" Precision="0" />
+          <Property Name="wpCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="PricePer" Type="Double" />
+          <Property Name="AppStatus" Type="Int32" Nullable="false" />
+          <Property Name="AppBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ListType" Type="Int32" />
+          <Property Name="A1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="A5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MQty" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="AiegleSalaryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_BasicWP" EntityType="Self.T_BasicWP" />
+          <EntitySet Name="T_Emp" EntityType="Self.T_Emp" />
+          <EntitySet Name="T_EmpSalary" EntityType="Self.T_EmpSalary" />
+          <EntitySet Name="T_FlowType" EntityType="Self.T_FlowType" />
+          <EntitySet Name="T_WPCard" EntityType="Self.T_WPCard" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AiegleSalaryModelStoreContainer" CdmEntityContainer="AiegleSalaryEntities">
+          <EntitySetMapping Name="T_BasicWP">
+            <EntityTypeMapping TypeName="AiegleSalary.Model.T_BasicWP">
+              <MappingFragment StoreEntitySet="T_BasicWP">
+                <ScalarProperty Name="WPCode" ColumnName="WPCode" />
+                <ScalarProperty Name="GongXu" ColumnName="GongXu" />
+                <ScalarProperty Name="GXContent" ColumnName="GXContent" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ReMark" ColumnName="ReMark" />
+                <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="CountDefaultValue" ColumnName="CountDefaultValue" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Emp">
+            <EntityTypeMapping TypeName="AiegleSalary.Model.T_Emp">
+              <MappingFragment StoreEntitySet="T_Emp">
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Dept" ColumnName="Dept" />
+                <ScalarProperty Name="POS" ColumnName="POS" />
+                <ScalarProperty Name="CheckRate" ColumnName="CheckRate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_EmpSalary">
+            <EntityTypeMapping TypeName="AiegleSalary.Model.T_EmpSalary">
+              <MappingFragment StoreEntitySet="T_EmpSalary">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="WPCode" ColumnName="WPCode" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="EName" ColumnName="EName" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="ListType" ColumnName="ListType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_FlowType">
+            <EntityTypeMapping TypeName="AiegleSalary.Model.T_FlowType">
+              <MappingFragment StoreEntitySet="T_FlowType">
+                <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+                <ScalarProperty Name="FlowName" ColumnName="FlowName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_WPCard">
+            <EntityTypeMapping TypeName="AiegleSalary.Model.T_WPCard">
+              <MappingFragment StoreEntitySet="T_WPCard">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="MArea" ColumnName="MArea" />
+                <ScalarProperty Name="BArea" ColumnName="BArea" />
+                <ScalarProperty Name="APDate" ColumnName="APDate" />
+                <ScalarProperty Name="wpCode" ColumnName="wpCode" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="PricePer" ColumnName="PricePer" />
+                <ScalarProperty Name="AppStatus" ColumnName="AppStatus" />
+                <ScalarProperty Name="AppBy" ColumnName="AppBy" />
+                <ScalarProperty Name="ListType" ColumnName="ListType" />
+                <ScalarProperty Name="A1" ColumnName="A1" />
+                <ScalarProperty Name="A2" ColumnName="A2" />
+                <ScalarProperty Name="A3" ColumnName="A3" />
+                <ScalarProperty Name="A4" ColumnName="A4" />
+                <ScalarProperty Name="A5" ColumnName="A5" />
+                <ScalarProperty Name="MQty" ColumnName="MQty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
